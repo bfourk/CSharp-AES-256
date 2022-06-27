@@ -5,7 +5,7 @@ Implementation of AES-256 in C#
 
 ## Usage
 ```
-// Note: key size must be 32 bytes
+Note: key size must be 32 bytes
 Encrypt(byte[] data, byte[] key)
 Return: byte[]
 ```
