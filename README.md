@@ -15,5 +15,5 @@ Encrypts the supplied data with the supplied key, adding the IV to the beginning
 Decrypt(byte[] data, byte[] key)
 Return: byte[]
 ```
-Decryps the supplied data with the supplied key. Returns only the decrypted ciphertext.
+Decryps the supplied data with the supplied key. Returns the decrypted ciphertext.
 Note: IV is automatically removed from the ciphertext.
