@@ -1,4 +1,4 @@
-# CSharp-AES-256
+# C# AES 256
 ***NOTE: This project is my attempt to learn symmetric cryptography in C#. This is most likely insecure and should *\*NOT\** be used in production***
 
 Implementation of AES-256 in C#
