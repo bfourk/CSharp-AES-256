@@ -1,5 +1,5 @@
 # C# AES 256
-***NOTE: This project is my attempt to learn symmetric cryptography in C#. This is most likely insecure and should *\*NOT\** be used in production***
+***NOTE: This project is my attempt to learn symmetric cryptography in C#. It has not been tested and should be before used in an actual project***
 
 Implementation of AES-256 in C#
 
