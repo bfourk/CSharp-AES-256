@@ -21,7 +21,7 @@ namespace SymmetricEncryption
 {
 	public class SimpleAES256
 	{
-		private static byte[] DoCrypto(byte[] data, ICryptoTransform crypt)
+		private static byte[] PerformCrypt(byte[] data, ICryptoTransform crypt)
 		{
 			if (data == null)
 			{
@@ -62,7 +62,7 @@ namespace SymmetricEncryption
 				using (ICryptoTransform encrypt = aes.CreateEncryptor())
 				{
 					// Encrypt data
-					byte[] ciphertext = DoCrypto(data, encrypt);
+					byte[] ciphertext = PerformCrypt(data, encrypt);
 
 					// Concat IV and ciphertext together
 					byte[] ret = new byte[ciphertext.Length + 16];
@@ -111,7 +111,7 @@ namespace SymmetricEncryption
 				// Create a decrypter, return unencrypted text
 				using (ICryptoTransform encrypt = aes.CreateDecryptor(key, iv))
 				{
-					byte[] ciphertext = DoCrypto(cipher, encrypt);
+					byte[] ciphertext = PerformCrypt(cipher, encrypt);
 
 					return ciphertext;
 				}
