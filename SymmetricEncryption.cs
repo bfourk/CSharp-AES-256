@@ -35,9 +35,7 @@ namespace SymmetricEncryption
 					crypto.Write(data, 0, data.Length);
 					crypto.FlushFinalBlock();
 
-					byte[] cipher = mem.ToArray();
-
-					return cipher;
+					return mem.ToArray();
 				}
 			}
 		}
@@ -110,11 +108,7 @@ namespace SymmetricEncryption
 
 				// Create a decrypter, return unencrypted text
 				using (ICryptoTransform encrypt = aes.CreateDecryptor(key, iv))
-				{
-					byte[] ciphertext = PerformCrypt(cipher, encrypt);
-
-					return ciphertext;
-				}
+					return PerformCrypt(cipher, encrypt);
 			}
 		}
 	}
